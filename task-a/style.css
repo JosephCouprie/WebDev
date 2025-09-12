@@ -1,0 +1,12 @@
+/*
+Author: Ville Heikkiniemi (CHANGE THIS)
+Date: 2025-09-01 (CHANGE THIS)
+*/
+
+body {
+  font-family: monospace, verdana;
+  background-color: #b8dce480;
+}
+h1 {
+  color: rgba(81, 0, 128, 0.85);
+}

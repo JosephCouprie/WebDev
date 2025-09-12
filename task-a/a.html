@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang=en>
+
+<head>
+    <style>
+        body{
+            font-family: monospace;
+        }
+
+        p {
+            color: blue;
+        }
+
+        .center {
+            margin: auto;
+            text-align: center;
+        }
+
+        .margin50L {
+            margin-left: 50px;
+        }
+
+        .margin-500L {
+            margin-left: -500px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="HEADER" class="margin50L">
+        <h1 style="display:inline;">Text</h1>
+        <p style="display:inline; color:red;">text</p>
+    </div>
+
+    <br>
+
+    <div class="center margin50L">
+        <script>
+            function appel1() {
+                window.location.href="http://google.com";
+            }
+        </script>
+
+        <button id="BUTTON" class="center margin-500L" onclick="setTimeout(appel1,100)">
+            <style>
+                #BUTTON {
+                    background: linear-gradient(22.5deg, hwb(240 47% 2% /0.5), hwb(0 51% 0% /0.5));
+                    color:hwb(0 0% 100% / 0.75);
+                    border-radius: 10px;
+                    box-shadow: 2px 2px 0px 0px;
+
+                    font-family: monospace;
+                }
+                #BUTTON:hover {
+                    background: linear-gradient(22.5deg, hwb(240 47% 2% /0.75), hwb(0 51% 0% /0.75));
+                }
+                #BUTTON:active {
+                    background: linear-gradient(22.5deg, hwb(240 47% 2% /1), hwb(0 51% 0% /1));
+                }
+            </style>
+
+            <!--this is a comment-->
+            
+            <!--box-shadow: x y blur spread
+            
+            -->
+            <!--hwb: hue saturation brightness / alpha-->
+            this is not a button <!--this is a comment-->
+        </button>
+    </div>
+</body>
+
+</html>
