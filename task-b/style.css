@@ -18,6 +18,6 @@ ul {
   list-style-type: square;
 }
 ol {
-  list-style-type: upper-roman;
+  list-style-type: lower-roman;
   color: rgb(100, 0, 100, 0.85);
 }
