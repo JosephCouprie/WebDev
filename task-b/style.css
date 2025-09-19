@@ -1,0 +1,23 @@
+/*
+Author: Joseph COUPRIE
+Date: 2025-09-19
+*/
+
+body {
+  font-family: monospace, verdana;
+  background-color: #b8dce480;
+}
+h1 {
+  color: rgba(81, 0, 128, 0.85);
+  font-size: 20px;
+}
+p {
+  color: rgba(0, 0, 0, 0.5);
+}
+ul {
+  list-style-type: square;
+}
+ol {
+  list-style-type: lower-roman;
+  color: rgb(100, 0, 100, 0.85);
+}
