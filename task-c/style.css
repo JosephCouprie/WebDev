@@ -24,3 +24,11 @@ ol {
   list-style-type: lower-roman;
   color: rgb(100, 0, 100, 0.85);
 }
+.center {
+  align-items: center;
+  text-align: center;
+}
+audio {
+  max-width: 500px;
+  width: 100%;
+}
