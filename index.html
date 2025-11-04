@@ -1,0 +1,92 @@
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <title>Form</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="index.js"></script>
+</head>
+
+<body>
+  <!--
+    Author: Joseph COUPRIE
+    Date: 2025-10-30
+  -->
+
+  <header class="site-header">
+    <h1>Form</h1>
+  </header>
+
+  <main class="content">
+    <!-- Top row split into two blocks -->
+    <div class="top-grid">
+      <!-- Student info (30%) -->
+      <section class="student-info" aria-label="Student information">
+        <h2 class="student-info-title">Information</h2>
+        <p><span class="student-name">Joseph COUPRIE</span></p>
+        <p><span class="student-group">Exchange Student</span></p>
+      </section>
+
+      <!-- Controls (70%): add course + day marks -->
+      <section class="controls" aria-label="Add Information">
+        <h2 class="controls-title">Add Information</h2>
+
+        <form id="addInfoForm">
+          <div>
+            <input id="HiddenTimestamp" name="HiddenTimestamp" type="hidden">
+          </div>
+
+          <div class="form-row">
+            <label for="FullName">Full Name</label>
+            <input id="FullName" name="FullName" type="text" placeholder="COUPRIE Joseph">
+            <p class="error" id="name_error"></p>
+          </div>
+
+          <div class="form-row">
+            <label for="Email">Email</label>
+            <input id="Email" name="Email" type="email" placeholder="thisisanemail@email.com">
+            <p class="error" id="email_error"></p>
+          </div>
+
+          <div class="form-row">
+            <label for="PhoneNumber">Phone Number</label>
+            <input id="PhoneNumber" name="PhoneNumber" type="tel" placeholder="+358 12 345 6789">
+            <p class="error" id="tel_error"></p>
+          </div>
+
+          <div class="form-row">
+            <label for="DateofBirth">Date of Birth</label>
+            <input id="DateofBirth" name="DateofBirth" type="date" placeholder="DD/MM/YYYY">
+            <p class="error" id="date_error"></p>
+          </div>
+
+          <div class="form-row">
+            <label><input id="Terms" type="checkbox" name="accept" value="accepted" required="">
+              I have read and accepted the terms and conditions</label>
+          </div>
+
+          <div class="form-row">
+            <button id="addRowBtn" type="submit" class="btn">Add row</button>
+            <button id="clearBtn" type="reset" class="btn btn-secondary">Clear</button>
+          </div>
+        </form>
+      </section>
+    </div>
+
+    <!-- Table -->
+    <div class="table-wrap">
+      <table class="table" id="infos">
+        <thead>
+          <tr>
+            <th>Submit Date</th>
+            <th>Fullname</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+            <th>Date of Birth</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+</body></html>
