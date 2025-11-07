@@ -59,24 +59,39 @@ document.addEventListener("DOMContentLoaded", () => {
     const DateofBirth = DateofBirth_Input.value.trim();
     if (!DateofBirth) {
       document.getElementById("date_error").innerHTML = "Please enter your birth date";
+      console.log("a");
       return;
     }
-    if (DateofBirth.value < 13 || DateofBirth.value > 130) {
+    if (2025 - DateofBirth.split("-")[0] < 13 || 2025 - DateofBirth.split("-")[0] > 130) {
       document.getElementById("date_error").innerHTML = "Please enter a valid birth date (you must be at least 13yo and younger than 130yo";
+      console.log("b");
       return;
     }
+    document.getElementById("date_error").innerHTML = "";
   }
   DateofBirth_Input.addEventListener("input", checkBirth);
 
 
-
   form.addEventListener("submit", (event) => {
-    HiddenTimestamp_Input.value = new Date();
+    HiddenTimestamp_Input.value = new Date().toLocaleString();
+
+    const HiddenTimestamp = HiddenTimestamp_Input.value;
+    const FullName = FullName_Input.value.trim();
+    const Email = Email_Input.value.trim();
+    const PhoneNumber = PhoneNumber_Input.value.trim();
+    const DateofBirth = DateofBirth_Input.value.trim();
 
     event.preventDefault();
 
-    const HiddenTimestamp = HiddenTimestamp_Input.value.trim();
-    if (!HiddenTimestamp) {
+    checkName();
+    checkEmail();
+    checkNumber();
+    checkBirth();
+
+    if (document.getElementById("name_error").innerHTML ||
+      document.getElementById("email_error").innerHTML ||
+      document.getElementById("tel_error").innerHTML ||
+      document.getElementById("date_error").innerHTML) { 
       return;
     }
 
