@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const Email_Input = document.getElementById("Email");
   const PhoneNumber_Input = document.getElementById("PhoneNumber");
   const DateofBirth_Input = document.getElementById("DateofBirth");
+  const CheckTerms_Input = document.getElementById("Terms");
 
   function checkName() {
     const FullName = FullName_Input.value.trim();
@@ -71,6 +72,16 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   DateofBirth_Input.addEventListener("input", checkBirth);
 
+  function CheckedTerms() {
+    const CheckTerms = CheckTerms_Input.value.trim();
+    if (!CheckTerms.checked) {
+      document.getElementById("terms_error").innerHTML = "Please accept the terms";
+      return;
+    }
+    document.getElementById("terms_error").innerHTML = "";
+  }
+  CheckTerms_Input.addEventListener("input", CheckTerms);
+
 
   form.addEventListener("submit", (event) => {
     HiddenTimestamp_Input.value = new Date().toLocaleString();
@@ -80,7 +91,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const Email = Email_Input.value.trim();
     const PhoneNumber = PhoneNumber_Input.value.trim();
     const DateofBirth = DateofBirth_Input.value.trim();
-
+    const CheckTerms = CheckTerms_Input.checked;
+    
     event.preventDefault();
 
     checkName();
