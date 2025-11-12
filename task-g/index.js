@@ -60,12 +60,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const DateofBirth = DateofBirth_Input.value.trim();
     if (!DateofBirth) {
       document.getElementById("date_error").innerHTML = "Please enter your birth date";
-      console.log("a");
       return;
     }
     if (2025 - DateofBirth.split("-")[0] < 13 || 2025 - DateofBirth.split("-")[0] > 130) {
       document.getElementById("date_error").innerHTML = "Please enter a valid birth date (you must be at least 13yo and younger than 130yo)";
-      console.log("b");
       return;
     }
     document.getElementById("date_error").innerHTML = "";
