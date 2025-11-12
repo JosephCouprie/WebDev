@@ -99,11 +99,13 @@ document.addEventListener("DOMContentLoaded", () => {
     checkEmail();
     checkNumber();
     checkBirth();
+    checkTerms();
 
     if (document.getElementById("name_error").innerHTML ||
       document.getElementById("email_error").innerHTML ||
       document.getElementById("tel_error").innerHTML ||
-      document.getElementById("date_error").innerHTML) { 
+      document.getElementById("date_error").innerHTML ||
+      document.getElementById("terms_error").innerHTML { 
       return;
     }
 
