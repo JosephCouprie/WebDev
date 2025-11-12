@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
     if (2025 - DateofBirth.split("-")[0] < 13 || 2025 - DateofBirth.split("-")[0] > 130) {
-      document.getElementById("date_error").innerHTML = "Please enter a valid birth date (you must be at least 13yo and younger than 130yo";
+      document.getElementById("date_error").innerHTML = "Please enter a valid birth date (you must be at least 13yo and younger than 130yo)";
       console.log("b");
       return;
     }
@@ -72,15 +72,15 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   DateofBirth_Input.addEventListener("input", checkBirth);
 
-  function CheckedTerms() {
-    const CheckTerms = CheckTerms_Input.value.trim();
-    if (!CheckTerms.checked) {
+  function checkedTerms() {
+    const CheckTerms = CheckTerms_Input.checked;
+    if (!CheckTerms) {
       document.getElementById("terms_error").innerHTML = "Please accept the terms";
       return;
     }
     document.getElementById("terms_error").innerHTML = "";
   }
-  CheckTerms_Input.addEventListener("input", CheckTerms);
+  CheckTerms_Input.addEventListener("input", checkedTerms);
 
 
   form.addEventListener("submit", (event) => {
@@ -99,13 +99,13 @@ document.addEventListener("DOMContentLoaded", () => {
     checkEmail();
     checkNumber();
     checkBirth();
-    checkTerms();
+    checkedTerms();
 
     if (document.getElementById("name_error").innerHTML ||
       document.getElementById("email_error").innerHTML ||
       document.getElementById("tel_error").innerHTML ||
       document.getElementById("date_error").innerHTML ||
-      document.getElementById("terms_error").innerHTML { 
+      document.getElementById("terms_error").innerHTML ){ 
       return;
     }
 
