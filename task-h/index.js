@@ -1,5 +1,5 @@
 // index.js
-// Author: Nassim Boudekhani
+// Author: Joseph COUPRIE
 // Date: 2025-11-13
 
 document.addEventListener("DOMContentLoaded", () => {
